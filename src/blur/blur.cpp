@@ -410,8 +410,13 @@ QRegion BlurEffect::blurRegion(EffectWindow *w) const
                 if (frame.has_value()) {
                     region = frame.value();
                 }
-                QRectF rectF = w->decoration()->rect();
-                QRect rect = rectF.toRect(); // 将 QRectF 转换为 QRect
+                // Client-side-decorated / Wayland windows (e.g. plasmashell
+                // panels) have no server-side decoration, so w->decoration()
+                // is null. Fall back to the whole window rect in that case
+                // instead of dereferencing a null pointer.
+                const QRect rect = w->decoration()
+                    ? QRectF(w->decoration()->rect()).toRect()
+                    : QRectF(w->rect()).toRect();
                 region += content->translated(w->contentsRect().topLeft().toPoint()) & rect;
             }
         } else if (frame.has_value()) {
