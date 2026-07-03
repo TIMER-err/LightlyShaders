@@ -1,10 +1,10 @@
 English | [中文](README_zh.md)
 
-##This branch only supports Plasma 6.3. For users of older versions, please move to the [main branch](https://github.com/walterfang12/LightlyShaders-Plasma6/)
+## This branch builds and runs on Plasma 6.7 (KWin 6.7).
 
 # LightlyShaders v3.0
 
- This effect works correctly with stock Plasma effects.Supports KDE Plasma 6.
+ This effect works correctly with stock Plasma effects. Supports KDE Plasma 6 (tested up to 6.7).
 
  ![default](screenshot.png)
 

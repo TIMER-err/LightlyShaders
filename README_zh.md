@@ -1,10 +1,10 @@
 [English](README.md) | 中文
 
-## 此分支仅支持Plasma 6.3，旧版本用户请移步[主分支](https://github.com/walterfang12/LightlyShaders-Plasma6/)
+## 此分支可在 Plasma 6.7（KWin 6.7）上编译并运行。
 
 # LightlyShaders v3.0
 
- 此效果与已有的 Plasma 特效一起正常工作。支持 KDE Plasma 6。
+ 此效果与已有的 Plasma 特效一起正常工作。支持 KDE Plasma 6（已在 6.7 上测试）。
 
  ![default](screenshot.png)
 
